@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* 초기설정 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+.container{
+    width: 1200px;
+    margin: 100px auto;
+}
+
+.card{
+    width: 285px;
+    margin-right: 20px;
+    box-shadow: 2px 5px 0 rgba(0,0,0,.3);
+}
+.card:last-child{
+    margin-right: 0;
+}
+
+.card .imgbox a{
+    display: block;
+}
+
+.card .imgbox img{
+    width: 285px;
+} 
+
+.card .desc{
+    padding: 15px;
+    display: none;
+}
+
+.card .desc h1{
+    font-size: 18px;
+}
+.card .desc p{
+    font-size: 14px;
+}
+
+.card:hover .desc{
+    display: block;
+    background-color: antiquewhite;
+}

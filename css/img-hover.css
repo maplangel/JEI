@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    /* overflow: hidden; 넘치는 영역을 가린다
+    원래는 있는데 눈에 안 보이게 처리하기 위해서, 실제로는  옆에 있는 검정색 배경이 움직임 */
+}
+
+li span{
+    /* ★★▽상당히 중요▽★★ */
+    position: absolute;
+    left: 400px;
+    top:0;
+    /* ★★△상당히 중요△★★ */
+    display: block;
+    width: 400px;
+    line-height: 200px;
+    background-color: rgba(0, 0, 0, .8);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    /* transition: 전환효과 (hover한테 주면 X 원래한테 주기) */
+    /* transition: 슬라이드 너낌~! */
+    transition: all 1s;
+    /* transition: all 1s; => 전체화면을 1초 동안 프렌지션한다. */
+}
+li:hover span{
+    top:0; left: 0;
+    /* 자식(span)포지션을 부모(li)의 0 0 위치로 보내야지 정확한 TRANSITION이 이루어 진다. */
+}

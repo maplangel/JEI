@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.left{float: left;}
+.right{float: right;}
+
+.wrap{
+    padding: 50px 100px 0;
+}
+
+.box{
+    width: 25%;
+    min-width: 100px;
+    min-height: 250px;
+    max-height: 2000px;
+    /* 사진 최대로 커지는 사이즈를 조절하는 속성 */
+}
+
+.box .inner{
+    padding: 30px;
+}
+
+.box .inner img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.wrap .box .inner h3{
+    text-align: center;
+    margin-top: 20px;
+}
+.wrap .box .inner p{
+    text-align: center;
+}
+/* 엔쓰차일드는 html 하단에 h1, p 등이 많으면 직접적으로 속성을 인식하기 어려워 하는 아이다 */
+/* 그래서 html이 길면 차라리 각각 항목에 클래스를 직접적으로 부여해서 속성을 정의해주는 것이 훨씬 더 정확하다. but 노가다 화이팅! */
+
+.wrap .box .c1 img:hover{
+    border: 20px solid rgb(202, 0, 0);
+}
+.wrap .box .c2 img:hover{
+    border: 20px solid rgb(255, 102, 0);
+}
+.wrap .box .c3 img:hover{
+    border: 20px solid rgb(0, 126, 48);
+}
+.wrap .box .c4 img:hover{
+    border: 20px solid rgb(196, 240, 0);
+}
